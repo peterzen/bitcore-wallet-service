@@ -36,13 +36,13 @@ var config = {
     },
   },
   blockchainExplorerOpts: {
-    livenet: {
+    dcrdlivenet: {
       provider: 'insight',
-      url: 'https://insight.bitpay.com:443',
+      url: 'http://127.0.0.1:3003',
     },
-    testnet: {
+    dcrdtestnet: {
       provider: 'insight',
-      url: 'https://test-insight.bitpay.com:443',
+      url: 'http://127.0.0.1:3004',
     },
   },
   // To use email notifications uncomment this:
