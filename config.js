@@ -43,7 +43,21 @@ var config = {
     dcrdtestnet: {
       provider: 'insight',
       url: 'http://127.0.0.1:3004',
+      // url: 'http://localhost:3001',
+      // Multiple servers (in priority order)
+      // url: ['http://a.b.c', 'https://test-insight.bitpay.com:443'],
     },
+  },
+  pushNotificationsOpts: {
+    templatePath: './lib/templates',
+    defaultLanguage: 'en',
+    defaultUnit: 'dcr',
+    subjectPrefix: '',
+    pushServerUrl: 'http://localhost:8000',
+  },
+  fiatRateServiceOpts: {
+    defaultProvider: 'BitPay',
+    fetchInterval: 60, // in minutes
   },
   // To use email notifications uncomment this:
   // emailOpts: {
@@ -54,11 +68,19 @@ var config = {
   //  from: 'wallet-service@bitcore.io',
   //  templatePath: './lib/templates',
   //  defaultLanguage: 'en',
-  //  defaultUnit: 'btc',
+  //  defaultUnit: 'dcr',
   //  publicTxUrlTemplate: {
   //    livenet: 'https://insight.bitpay.com/tx/{{txid}}',
   //    testnet: 'https://test-insight.bitpay.com/tx/{{txid}}',
   //  },
   //},
+  //
+  // To use sendgrid:
+  // var sgTransport = require('nodemail-sendgrid-transport');
+  // mailer:sgTransport({
+  //  api_user: xxx,
+  //  api_key: xxx,
+  // });
+
 };
 module.exports = config;
