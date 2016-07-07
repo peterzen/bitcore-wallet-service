@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "async": "^0.9.0",
-    "bitcore": "git://github.com/decred/bitcore.git#master-new",
+    "bitcore": "git://github.com/decred/bitcore.git#before_sync",
     "bitcore-wallet-utils": "git://github.com/decred/bitcore-wallet-utils.git#master",
     "crypto-browserify": "git://github.com/decred/crypto-browserify.git#master-legacy",
     "body-parser": "^1.11.0",
